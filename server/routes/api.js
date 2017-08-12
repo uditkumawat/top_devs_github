@@ -15,7 +15,7 @@ router.get('/devs/:language', (req, res) => {
     // Get developers in Lagos, Nigeria using their programming language
     const lang=req.params.language;
 
-    axios.get(`${API}/search/users?q=type:user+location:lagos+language:${lang}`)
+    axios.get(`${API}/search/users?q=type:user+location:india+language:${lang}`)
         .then(devs => {
             res.status(200).json(devs.data.items);
         })
